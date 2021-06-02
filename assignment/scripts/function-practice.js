@@ -14,8 +14,8 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName( Mary ) {
-  return 'Hello Mary!';
+function helloName( Jo ) {
+  return 'Hello Jo!';
 }
 // Remember to call the function to test
 console.log('Test - should say "helloName"', helloName());
@@ -51,24 +51,39 @@ console.log('Is positive' );
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
+  console.log(true);
 console.log( 'isPositive - should say false', isPositive(0) );
+  console.log(false);
 console.log( 'isPositive - should say false', isPositive(-3) );
+  console.log(false);
 
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
    let lastIndex = array.length -1;
+// Starting to finaly get used to all of this, putting objects inside the argument
+//
    return array[lastIndex];
 }
-console.log(getLast([1,2,3]));
-console.log(getLast([]));
+  console.log(getLast([1,2,3]));
+  console.log(getLast([]));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
 
+// Practice
+function find( value, array ){
+for ( let i = 0; i < array.length; i++) {
+  if (value == array[i]){
+  return true;
+ }
 }
+  return false;
+}
+console.log(find(10, [2, 4, 6, 8, 10]));
+console.log(find(111, [2, 4, 6, 8, 10]));
+//Help has arrived
 
 // ----------------------
 // Stretch Goals
@@ -76,7 +91,6 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
